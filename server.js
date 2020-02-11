@@ -9,8 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, "index.html")));
-app.use(express.static(path.join(__dirname, "public")));
-app.use(express.static(path.join(__dirname, "public/assets/app.js")));
+app.use(express.static(path.join(__dirname, "/public")));
 
 app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "index.html"));
