@@ -225,7 +225,7 @@ function displayUserAvailable(user) {
         var databaseUsername = allOtherUser.userName;
         var currentUser = user.email.split('@')[0];
         if (currentUser != databaseUsername) {
-
+            // Creates html elements for each giffy post
             var htmlText = `<li>
                             <div class="d-flex bd-highlight click-user" data-user=${realname} data-other-user=${databaseUsername} id=${realname}-and-${databaseUsername}>
                                 <div class="img_cont">
