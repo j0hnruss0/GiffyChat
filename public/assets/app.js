@@ -24,7 +24,7 @@ $(document).ready(function () {
     // initialize Firebase
     initFirebaseAuth();
 
-
+    // global searchTerm variable Defunct until further notice
     var searchTerm;
     // This function fetches the GIFs from Tenor API 
     $('#input-msg').on('change', function (e) {
@@ -67,6 +67,7 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET",
         }).then(function (response) {
+            // This function gets the preview images for users to pick from
             if (!$('.imagetmp').is(':visible')) {
                 $('.imagetmp').css("display", "block");
             }
@@ -101,7 +102,7 @@ $(document).ready(function () {
 });
 
 
-//function to handlesignUpBtnClick
+//function to handlesignUpBtnClick, creates users
 function handlesignUpBtnClick() {
     event.preventDefault()
     var userName = $('#userName').val().trim();
@@ -155,7 +156,7 @@ function validateForm(userName, password, password2) {
 };
 
 
-//function that allows users to be able to sign in 
+//function that allows users to be able to sign in if an account already exists
 function signIn() {
     event.preventDefault()
     var email = $('#emailInput').val().trim() + '@rhahekel.com';
